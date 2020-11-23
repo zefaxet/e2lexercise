@@ -1,6 +1,5 @@
 package es.auttonberri.exercise.model.domain;
 
-import com.sun.istack.NotNull;
 import lombok.*;
 
 import javax.persistence.*;
