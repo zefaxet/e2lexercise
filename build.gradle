@@ -25,6 +25,16 @@ dependencies {
 	runtimeOnly 'com.h2database:h2'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+	// stuff added by me post-springinitializr
+
+	// https://mvnrepository.com/artifact/org.junit.platform/junit-platform-runner
+	testCompile group: 'org.junit.platform', name: 'junit-platform-runner', version: '1.7.0'
+
+	// https://mvnrepository.com/artifact/org.mockito/mockito-core
+	testCompile group: 'org.mockito', name: 'mockito-core', version: '3.6.0'
+
+
 }
 
 test {
