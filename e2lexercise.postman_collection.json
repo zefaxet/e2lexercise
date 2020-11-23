@@ -1,0 +1,391 @@
+{
+	"info": {
+		"_postman_id": "9e8dcaa6-9907-44cf-8d16-366b173ce43e",
+		"name": "e2lexercise",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Parking Lot Module",
+			"item": [
+				{
+					"name": "Add Spots",
+					"item": [
+						{
+							"name": "Add Spots",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"countCovered\": 1,\r\n    \"countUncovered\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/lot/test/spots/add",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"lot",
+										"test",
+										"spots",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add Spots 400",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"countCovered\": \"a lot\",\r\n    \"countUncovered\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/lot/test/spots/add",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"lot",
+										"test",
+										"spots",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add Spots 404",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"countCovered\": 1,\r\n    \"countUncovered\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/lot/doesntexist/spots/add",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"lot",
+										"doesntexist",
+										"spots",
+										"add"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "99ff326e-781e-4c11-b95e-e61847bb058b",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "d88f4b22-2dd7-4f0a-ac01-912972261cd5",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Get Occupied Spots",
+					"item": [
+						{
+							"name": "Get Occupied Spots",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/lot/test/spots/occupied",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"lot",
+										"test",
+										"spots",
+										"occupied"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Occupied 404",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/lot/doesntexist/spots/occupied",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"lot",
+										"doesntexist",
+										"spots",
+										"occupied"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Get Unoccupied Spots",
+					"item": [
+						{
+							"name": "Get Unoccupied Spots",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/lot/test/spots/unoccupied",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"lot",
+										"test",
+										"spots",
+										"unoccupied"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Unoccupied 404",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/lot/doesntexist/spots/unoccupied",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"lot",
+										"doesntexist",
+										"spots",
+										"unoccupied"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Change Lot Rate",
+					"item": [
+						{
+							"name": "Change Rate",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"rate\": 0.6\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/lot/test/rate",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"lot",
+										"test",
+										"rate"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Change Rate 400",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"rate\": \"string\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/lot/test/rate",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"lot",
+										"test",
+										"rate"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Change Rate 404",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"rate\": 0.6\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/lot/doesntexist/rate",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"lot",
+										"doesntexist",
+										"rate"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Transaction Module",
+			"item": [
+				{
+					"name": "Check In",
+					"item": [
+						{
+							"name": "Check In",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"lotId\": \"test\",\r\n    \"desiredSpotType\": \"UNCOVERED\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/transaction/check-in/T36",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"transaction",
+										"check-in",
+										"T36"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "5aaa07d4-4b07-4952-afa5-29b9c2504562",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "fdba0d72-e9f4-4b99-901c-55c1d0f0de6b",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
