@@ -10,3 +10,21 @@ The ORM's differ from the provided UML class diagrams. This has been acknowledge
 
 # Suggestions
 The written description of the modules were inconsistent with their UML representations.
+
+# Instructions
+
+This exercise implementation was built using Oracle OpenJDK 12.
+https://jdk.java.net/java-se-ri/12
+
+### Running the service
+
+```shell script
+$ git clone https://github.com/zefaxet/e2lexercise
+$ cd e2lexercise
+e2lexercise$ gradle[w] bootRun
+```
+
+### Running the tests
+```shell script
+e2lexercise$ gradle[w] test
+```
